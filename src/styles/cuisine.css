@@ -1,0 +1,6 @@
+
+.cui{background:var(--bg2)}
+.cui .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end}
+.cui .ph{aspect-ratio:3/4}
+.cui ul{list-style:none;padding:0;margin:2rem 0 2.5rem;border-top:1px solid var(--line)}
+.cui li{padding:1rem 0;border-bottom:1px solid var(--line);font:1.5rem var(--serif);color:var(--mute)}

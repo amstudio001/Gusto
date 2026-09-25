@@ -1,0 +1,8 @@
+.bar{background:var(--dark);color:var(--darkink)}
+.bar .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center}
+.bar .eyebrow{color:#d9a5ad}
+.bar h2 em{color:#d8bf8c}
+.bar p{color:#b9ad9d;margin:1.4rem 0;max-width:32rem}
+.bar ul{list-style:none;padding:0;margin:2rem 0 2.5rem;border-top:1px solid rgba(239,230,214,.16)}
+.bar li{padding:.9rem 0;border-bottom:1px solid rgba(239,230,214,.16);font:1.4rem var(--serif);color:#d8cfc0}
+.bar .ph{aspect-ratio:4/5}

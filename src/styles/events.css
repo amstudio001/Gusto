@@ -1,0 +1,4 @@
+
+.ev .wrap{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.ev ul{list-style:none;padding:0;columns:2;font:1.4rem var(--serif);color:var(--mute);margin:2rem 0}
+.ev li{padding:.4rem 0}

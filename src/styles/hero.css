@@ -1,0 +1,24 @@
+
+.hero{min-height:100vh;min-height:100svh;padding:0;position:relative;display:grid;place-items:center;text-align:center;color:#efe6d6;overflow:hidden}
+.hero .ph{position:absolute;inset:0;animation:zoom 24s ease-out forwards;background-size:cover;background-position:center;background-repeat:no-repeat;transform:scale(1.02)}
+@keyframes zoom{from{transform:scale(1.12)}to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(20,16,15,.35),rgba(20,16,15,.65));z-index:1}
+.hero .in{position:relative;z-index:2;padding:1.5rem;max-width:760px;width:min(100%,760px)}
+.hero h1{font-size:clamp(3rem,9vw,7.5rem);font-style:italic;margin:1rem 0 1.5rem}
+.hero .est{font-size:.72rem;letter-spacing:.35em;text-transform:uppercase;color:#d8bf8c}
+.mark{width:84px;height:84px;border:1px solid #d8bf8c;border-radius:50%;margin:0 auto 1.6rem;display:grid;place-items:center;font-size:.6rem;letter-spacing:.15em;color:#d8bf8c}
+.scroll{position:absolute;bottom:2rem;left:50%;width:1px;height:56px;background:linear-gradient(#efe6d6,transparent);z-index:2;animation:pulse 2.4s infinite}
+@keyframes pulse{50%{opacity:.25}}
+
+.hero-logo{width:min(440px,72vw);height:auto;display:block;margin:0 auto 2rem}
+
+.badge{display:inline-block;border:1px solid rgba(216,191,140,.5);padding:.55rem 1.2rem;font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;margin-bottom:1.8rem;backdrop-filter:blur(4px)}
+
+@media (max-width: 600px){
+  .hero .in{padding:1rem .9rem 2.2rem}
+  .hero-logo{width:min(300px,74vw);margin-bottom:1.4rem}
+  .badge{font-size:.56rem;letter-spacing:.16em;line-height:1.5;padding:.55rem .85rem;margin-bottom:1.3rem}
+  .hero .est{letter-spacing:.18em;font-size:.58rem;line-height:1.7}
+  .hero .in p{font-size:1.25rem!important;line-height:1.4}
+  .scroll{bottom:1.2rem}
+}

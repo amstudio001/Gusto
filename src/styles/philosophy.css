@@ -1,0 +1,7 @@
+
+.phi{border-top:1px solid var(--line)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);margin-top:4rem;border-top:1px solid var(--line)}
+.grid4>div{padding:2.2rem 1.6rem 1rem 0}
+.grid4 b{font:400 .8rem var(--sans);color:var(--gold);letter-spacing:.2em}
+.grid4 h3{font-size:1.9rem;margin:1rem 0 .6rem;letter-spacing:.06em}
+.grid4 p{color:var(--mute);font-size:.9rem}

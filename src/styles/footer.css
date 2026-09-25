@@ -1,0 +1,4 @@
+footer{background:#121010;color:#8f857a;padding:3rem clamp(1.3rem,6vw,6rem);font-size:.8rem;display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between}
+footer .logo{color:#efe6d6}footer a:hover{color:#efe6d6}
+
+.flogo{height:56px;width:auto;display:block;margin-bottom:1rem}

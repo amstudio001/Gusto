@@ -1,0 +1,11 @@
+.cpt{background:var(--bg)}
+.cpt h2 em{color:var(--wine)}
+.cpt-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center;margin-top:3.5rem}
+.cpt .lead{font:400 clamp(1.5rem,3vw,2.3rem)/1.35 var(--serif)}
+.cpt .note{margin-top:1.4rem}
+.cpt .ph{aspect-ratio:4/5}
+.pillars{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);margin-top:5rem;border-top:1px solid var(--line)}
+.pillars li{padding:2rem 2rem 0 0}
+.pillars i{font-style:normal;color:var(--gold);font-size:.75rem;letter-spacing:.2em;display:block;margin-bottom:.8rem}
+.pillars b{font:400 1.8rem/1.1 var(--serif);display:block;margin-bottom:.7rem}
+.pillars span{color:var(--mute);font-size:.9rem;display:block}
