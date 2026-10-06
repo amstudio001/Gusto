@@ -1,5 +1,5 @@
 import '../styles/concept.css'
-import interior from '../assets/newinterior.png'
+import interior from '../assets/restaurant/interior/newinterior.png'
 import { useLanguage } from '../context/LanguageContext'
 
 export default function Concept() {

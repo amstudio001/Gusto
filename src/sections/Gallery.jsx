@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react'
 import '../styles/gallery.css'
-import bestInterior from '../assets/bestinterior.png'
-import newInterior from '../assets/newinterior.png'
-import aboutPhoto from '../assets/about.png'
-import interior1 from '../assets/Interior1.png'
-import interior2 from '../assets/Interior2.png'
-import interior3 from '../assets/Interior3.png'
-import interior4 from '../assets/Interior4.png'
-import barPhoto from '../assets/bar.png'
+import bestInterior from '../assets/restaurant/interior/bestinterior.png'
+import newInterior from '../assets/restaurant/interior/newinterior.png'
+import aboutPhoto from '../assets/restaurant/interior/about.png'
+import interior1 from '../assets/restaurant/interior/Interior1.png'
+import interior2 from '../assets/restaurant/interior/Interior2.png'
+import interior3 from '../assets/restaurant/interior/Interior3.png'
+import interior4 from '../assets/restaurant/interior/Interior4.png'
+import barPhoto from '../assets/restaurant/bar/bar.png'
+import newPhoto2 from '../assets/restaurant/interior/newphoto2-web.jpg'
+import newPhoto3 from '../assets/restaurant/interior/newphoto3-web.jpg'
+import newPhoto4 from '../assets/restaurant/interior/newphoto4-web.jpg'
 import { useLanguage } from '../context/LanguageContext'
 
 const photos = [
@@ -19,6 +22,9 @@ const photos = [
   { image: aboutPhoto, v: '', en: 'The room between courses', ru: 'Зал между блюдами' },
   { image: interior4, v: 'b', en: 'A seat in the house', ru: 'Место в нашем доме' },
   { image: barPhoto, v: 'c', en: 'Behind the bar', ru: 'За баром' },
+  { image: newPhoto2, v: 'b', en: 'The renewed dining room', ru: 'Обновлённый зал' },
+  { image: newPhoto3, v: 'c', en: 'An evening setting', ru: 'Вечерняя сервировка' },
+  { image: newPhoto4, v: '', en: 'A quiet corner', ru: 'Уютный уголок' },
 ]
 
 export default function Gallery() {

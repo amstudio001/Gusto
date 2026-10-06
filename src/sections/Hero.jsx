@@ -1,6 +1,6 @@
 import '../styles/hero.css'
-import logo from '../assets/logo.png'
-import interior from '../assets/bestinterior.png'
+import logo from '../assets/brand/logo.png'
+import interior from '../assets/restaurant/interior/bestinterior.png'
 import { useLanguage } from '../context/LanguageContext'
 
 export default function Hero() {

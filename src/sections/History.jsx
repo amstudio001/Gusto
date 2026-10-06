@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import '../styles/history.css'
 import { useLanguage } from '../context/LanguageContext'
+import oldGusto from '../assets/history/oldgusto-web.jpg'
+import newGusto from '../assets/history/newgusto-web.jpg'
 
 const milestones = [
   { year: '2006', en: 'The beginning', ru: 'Начало', text: { en: "Gusto opens its doors and introduces Yerevan to the city's first open-kitchen experience.", ru: 'Gusto открывает двери и знакомит Ереван с первым в городе опытом открытой кухни.' } },
@@ -66,6 +68,20 @@ export default function History() {
       <p>{ru ? 'Мы менялись, сохраняя главное — искреннее гостеприимство, продуманную кухню и атмосферу, в которую хочется возвращаться.' : 'Through the years, we have evolved while staying true to what matters most — authentic hospitality, thoughtful cuisine, and an atmosphere that makes every visit memorable.'}</p>
       <p>{ru ? 'Сегодня мы продолжаем эту историю с той же самоотдачей, соединяя традиции прошлого и современный взгляд в будущее.' : 'Today, we continue the story with the same dedication, bringing together the traditions of the past and a modern vision for the future.'}</p></div>
   </div>
+  <div className="history-photos wrap rv">
+    <div className="history-photo-heading"><span>2006 — 2026</span><strong>{ru ? 'Два десятилетия — одно место.' : 'Two decades, one place.'}</strong></div>
+    <figure className="history-photo history-photo-archive">
+      <img src={oldGusto} alt={ru ? 'Прежний фасад ресторана Gusto' : 'The former Gusto restaurant facade'} />
+      <span className="history-photo-year">2006</span>
+      <figcaption><span>{ru ? 'Первые годы' : 'The early years'}</span><strong>{ru ? 'Gusto тогда' : 'Gusto then'}</strong></figcaption>
+    </figure>
+    <figure className="history-photo">
+      <img src={newGusto} alt={ru ? 'Новый фасад ресторана Gusto' : 'The new Gusto restaurant facade'} />
+      <span className="history-photo-year">2026</span>
+      <figcaption><span>{ru ? 'Новая глава' : 'A new chapter'}</span><strong>{ru ? 'Gusto сегодня' : 'Gusto today'}</strong></figcaption>
+    </figure>
+  </div>
+  <div className="history-continuation wrap" aria-hidden="true"><span /><span /></div>
   <div className="history-lower wrap">
     <div className="timeline rv" aria-label="Gusto history milestones">
       <div className="timeline-tabs" role="tablist" aria-label={ru ? 'Вехи истории' : 'History milestones'}>

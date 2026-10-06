@@ -1,5 +1,4 @@
 import './styles/base.css'
-import './styles/responsive.css'
 import useReveal from './hooks/useReveal'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -16,6 +15,7 @@ import Gallery from './sections/Gallery'
 import Social from './sections/Social'
 import Contact from './sections/Contact'
 import BackToTop from './components/BackToTop'
+import './styles/responsive.css'
 
 export default function App() {
   useReveal()

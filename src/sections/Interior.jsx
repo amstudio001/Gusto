@@ -1,8 +1,8 @@
 import '../styles/interior.css'
-import interior1 from '../assets/Interior1.png'
-import interior2 from '../assets/Interior2.png'
-import interior3 from '../assets/Interior3.png'
-import interior4 from '../assets/Interior4.png'
+import interior1 from '../assets/restaurant/interior/Interior1.png'
+import interior2 from '../assets/restaurant/interior/Interior2.png'
+import interior3 from '../assets/restaurant/interior/Interior3.png'
+import interior4 from '../assets/restaurant/interior/Interior4.png'
 
 export default function Interior() {
   return (
