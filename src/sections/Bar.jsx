@@ -5,24 +5,28 @@ import negroniPhoto from '../assets/restaurant/bar/Cockteil Negroni.png'
 import oldFashionedPhoto from '../assets/restaurant/bar/Old Fashioned.png'
 import espressoMartiniPhoto from '../assets/restaurant/bar/essprero martini.png'
 import spritzPhoto from '../assets/restaurant/bar/spritz.png'
+import camillePhoto from '../assets/restaurant/bar/Camille De Labrie.png'
+import chivasPhoto from '../assets/restaurant/bar/Chivas.png'
+import azulPhoto from '../assets/restaurant/bar/Azul.png'
+import jagermeisterPhoto from '../assets/restaurant/bar/Jagermeister.png'
 import { useLanguage } from '../context/LanguageContext'
 
 const barMenus = [
   {
-    en: 'Signature cocktails',
-    ru: 'Авторские коктейли',
+    en: 'Classic Cocktails',
+    ru: 'Классические коктейли',
     items: {
       en: [
-        { name: 'Negroni Sbagliato', ingredients: 'Campari, prosecco, orange bitters', price: '$17', image: negroniPhoto },
-        { name: 'Spritz Aperitivo', ingredients: 'Aperol, soda, orange, sparkling wine', price: '$15', image: spritzPhoto },
-        { name: 'Old Fashioned', ingredients: 'Whiskey, sugar, bitters, orange twist', price: '$16', image: oldFashionedPhoto },
-        { name: 'Espresso Martini', ingredients: 'Vodka, espresso, coffee liqueur, crema', price: '$18', image: espressoMartiniPhoto },
+        { name: 'Negroni Sbagliato', ingredients: 'Campari, prosecco, orange bitters', price: '3700֏', image: negroniPhoto },
+        { name: 'Old Fashioned', ingredients: 'Whiskey, sugar, bitters, orange twist', price: '3500֏', image: oldFashionedPhoto },
+        { name: 'Spritz Aperitivo', ingredients: 'Aperol, soda, orange, sparkling wine', price: '4300֏', image: spritzPhoto },
+        { name: 'Espresso Martini', ingredients: 'Vodka, espresso, coffee liqueur, crema', price: '3500֏', image: espressoMartiniPhoto },
       ],
       ru: [
-        { name: 'Негрони Сбаглиато', ingredients: 'Кампари, просекко, апельсиновые биттеры', price: '1700֏', image: negroniPhoto },
-        { name: 'Спритц Аперитиво', ingredients: 'Апероль, содовая, апельсин, игристое вино', price: '1500֏', image: spritzPhoto },
-        { name: 'Олд Фэшн', ingredients: 'Виски, сахар, биттер, апельсиновая цедра', price: '1600֏', image: oldFashionedPhoto },
-        { name: 'Эспрессо Мартини', ingredients: 'Водка, эспрессо, кофейный ликёр, крема', price: '1800֏', image: espressoMartiniPhoto },
+        { name: 'Негрони Сбаглиато', ingredients: 'Кампари, просекко, апельсиновые биттеры', price: '3700֏', image: negroniPhoto },
+        { name: 'Олд Фэшн', ingredients: 'Виски, сахар, биттер, апельсиновая цедра', price: '3500֏', image: oldFashionedPhoto },
+        { name: 'Спритц Аперитиво', ingredients: 'Апероль, содовая, апельсин, игристое вино', price: '4300֏', image: spritzPhoto },
+        { name: 'Эспрессо Мартини', ingredients: 'Водка, эспрессо, кофейный ликёр, крема', price: '3500֏', image: espressoMartiniPhoto },
       ],
     },
   },
@@ -31,16 +35,16 @@ const barMenus = [
     ru: 'Вино и крепкие напитки',
     items: {
       en: [
-        { name: 'Italian Pinot Noir', ingredients: 'Light-bodied red, berry finish', price: '$14', image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=80' },
-        { name: 'Sicilian White', ingredients: 'Crisp, mineral, citrus-driven', price: '$13', image: 'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=900&q=80' },
-        { name: 'Single Malt Pour', ingredients: 'Smoky, peaty, warm finish', price: '$19', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=900&q=80' },
-        { name: 'Zero Proof Spritz', ingredients: 'Citrus, herbs, sparkling tonic', price: '$9', image: 'https://images.unsplash.com/photo-1525253086316-d0c936c814f8?auto=format&fit=crop&w=900&q=80' },
+        { name: 'Camille De Labrie', ingredients: 'Premium spirit', price: '13000֏', image: camillePhoto },
+        { name: 'Chivas Regal 12 - 50ml', ingredients: 'Premium whiskey pour', price: '3500֏', image: chivasPhoto },
+        { name: 'Clase Azul Reposado - 50ml', ingredients: 'Tequila shot', price: '17000֏', image: azulPhoto },
+        { name: 'Jagermeister - 50ml', ingredients: 'Herbal liqueur', price: '2500֏', image: jagermeisterPhoto },
       ],
       ru: [
-        { name: 'Итальянский Пино Нуар', ingredients: 'Легкое красное вино с ягодным послевкусием', price: '1400֏', image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=80' },
-        { name: 'Сицилийское белое', ingredients: 'Освежающее, минеральное, цитрусовое', price: '1300֏', image: 'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=900&q=80' },
-        { name: 'Односолодовый виски', ingredients: 'Дымный, торфяной, теплый финиш', price: '1900֏', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=900&q=80' },
-        { name: 'Безалкогольный Spritz', ingredients: 'Цитрус, травы, игристый тоник', price: '900֏', image: 'https://images.unsplash.com/photo-1525253086316-d0c936c814f8?auto=format&fit=crop&w=900&q=80' },
+        { name: 'Camille De Labrie', ingredients: 'Премиальный напиток', price: '13000֏', image: camillePhoto },
+        { name: 'Chivas Regal 12 - 50ml', ingredients: 'Премиальный виски', price: '3500֏', image: chivasPhoto },
+        { name: 'Clase Azul Reposado - 50ml', ingredients: 'Текила шот', price: '17000֏', image: azulPhoto },
+        { name: 'Jagermeister - 50ml', ingredients: 'Травяной ликер', price: '2500֏', image: jagermeisterPhoto },
       ],
     },
   },
