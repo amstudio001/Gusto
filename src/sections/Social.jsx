@@ -15,7 +15,7 @@ export default function Social() {
   return (
 <section className="soc"><div className="wrap rv"><span className="eyebrow">{ru ? 'Следите за нашей историей' : 'Follow Our Story'}</span>
   <h2><a href="https://www.instagram.com/gusto.yerevan/" target="_blank" rel="noreferrer">@gusto.yerevan</a></h2>
-  <div className="sg">{socialPhotos.map((photo, index) => <a className={`ph social-card ${index % 3 === 1 ? 'b' : ''} ${index % 3 === 2 ? 'c' : ''}`} key={photo} href="https://www.instagram.com/gusto.yerevan/" target="_blank" rel="noreferrer" aria-label={`${ru ? 'Посмотреть момент Gusto' : 'View Gusto moment'} ${index + 1} ${ru ? 'в Instagram' : 'on Instagram'}`} style={{ backgroundImage: `url(${photo})`, backgroundSize: 'cover', backgroundPosition: 'center' }}><span aria-hidden="true">↗</span></a>)}</div>
+  <div className="sg">{socialPhotos.map((photo, index) => <a className={`ph social-card ${index % 3 === 1 ? 'b' : ''} ${index % 3 === 2 ? 'c' : ''}`} key={photo} href="https://www.instagram.com/gusto.yerevan/" target="_blank" rel="noreferrer" aria-label={`${ru ? 'Посмотреть момент Gusto' : 'View Gusto moment'} ${index + 1} ${ru ? 'в Instagram' : 'on Instagram'}`} data-bg={photo} style={{ backgroundSize: 'cover', backgroundPosition: 'center' }}><span aria-hidden="true">↗</span></a>)}</div>
   <p className="note" style={{ marginTop: '1rem' }}>{ru ? 'Больше моментов нашего дома — в Instagram.' : 'More moments from the house on Instagram.'}</p></div></section>
   )
 }

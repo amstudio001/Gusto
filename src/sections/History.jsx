@@ -71,12 +71,12 @@ export default function History() {
   <div className="history-photos wrap rv">
     <div className="history-photo-heading"><span>2006 — 2026</span><strong>{ru ? 'Два десятилетия — одно место.' : 'Two decades, one place.'}</strong></div>
     <figure className="history-photo history-photo-archive">
-      <img src={oldGusto} alt={ru ? 'Прежний фасад ресторана Gusto' : 'The former Gusto restaurant facade'} />
+      <img src={oldGusto} alt={ru ? 'Прежний фасад ресторана Gusto' : 'The former Gusto restaurant facade'} loading="lazy" decoding="async" />
       <span className="history-photo-year">2006</span>
       <figcaption><span>{ru ? 'Первые годы' : 'The early years'}</span><strong>{ru ? 'Gusto тогда' : 'Gusto then'}</strong></figcaption>
     </figure>
     <figure className="history-photo">
-      <img src={newGusto} alt={ru ? 'Новый фасад ресторана Gusto' : 'The new Gusto restaurant facade'} />
+      <img src={newGusto} alt={ru ? 'Новый фасад ресторана Gusto' : 'The new Gusto restaurant facade'} loading="lazy" decoding="async" />
       <span className="history-photo-year">2026</span>
       <figcaption><span>{ru ? 'Новая глава' : 'A new chapter'}</span><strong>{ru ? 'Gusto сегодня' : 'Gusto today'}</strong></figcaption>
     </figure>

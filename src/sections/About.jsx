@@ -7,7 +7,7 @@ export default function About() {
   const ru = language === 'ru'
   return (
 <section className="about" id="about"><div className="wrap">
-  <div className="ph rv" role="img" aria-label="Gusto restaurant" style={{ backgroundImage: `url(${aboutPhoto})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+  <div className="ph rv" role="img" aria-label="Gusto restaurant" data-bg={aboutPhoto} style={{ backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
   <div className="about-copy">
     <span className="eyebrow rv about-reveal-1">{ru ? 'О нас' : 'About'}</span>
     <h2 className="rv about-reveal-2">{ru ? <>Традиция, <em>переосмысленная.</em></> : <>Tradition, <em>refined.</em></>}</h2>

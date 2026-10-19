@@ -1,18 +1,18 @@
 import { useState } from 'react'
 import '../styles/cuisine.css'
-import dishPhoto from '../assets/cuisine/dish.png'
-import carbonaraPhoto from '../assets/cuisine/italian/carbonara.png'
-import milanesePhoto from '../assets/cuisine/italian/milanese.png'
-import parmigianaPhoto from '../assets/cuisine/italian/parmigiano.png'
-import pizzaPhoto from '../assets/cuisine/italian/pizza.png'
-import porkRibsPhoto from '../assets/cuisine/seafood-grill/Pork ribs with funchoza.png'
+import dishPhoto from '../assets/cuisine/dish.jpg'
+import carbonaraPhoto from '../assets/cuisine/italian/carbonara.jpg'
+import milanesePhoto from '../assets/cuisine/italian/milanese.jpg'
+import parmigianaPhoto from '../assets/cuisine/italian/parmigiano.jpg'
+import pizzaPhoto from '../assets/cuisine/italian/pizza.jpg'
+import porkRibsPhoto from '../assets/cuisine/seafood-grill/Pork ribs with funchoza.jpg'
 import tagliataPhoto from '../assets/cuisine/seafood-grill/Tagliata with grilled vegetables.png'
-import salmonPhoto from '../assets/cuisine/seafood-grill/salmon.png'
-import steakPhoto from '../assets/cuisine/seafood-grill/steak.png'
-import cheesecakePhoto from '../assets/cuisine/desserts/Cheesecake.png'
-import cremeBruleePhoto from '../assets/cuisine/desserts/Crème brulee.png'
-import honeyCakePhoto from '../assets/cuisine/desserts/Honey cake.png'
-import rumBabaPhoto from '../assets/cuisine/desserts/Rum Baba.png'
+import salmonPhoto from '../assets/cuisine/seafood-grill/salmon.jpg'
+import steakPhoto from '../assets/cuisine/seafood-grill/steak.jpg'
+import cheesecakePhoto from '../assets/cuisine/desserts/Cheesecake.jpg'
+import cremeBruleePhoto from '../assets/cuisine/desserts/Crème brulee.jpg'
+import honeyCakePhoto from '../assets/cuisine/desserts/Honey cake.jpg'
+import rumBabaPhoto from '../assets/cuisine/desserts/Rum Baba.jpg'
 import { useLanguage } from '../context/LanguageContext'
 
 const menus = [
@@ -105,7 +105,7 @@ export default function Cuisine() {
           <div className="menu-grid" key={`${language}-${currentMenu.en}`}>
             {currentItems.map((item) => (
               <article className="dish-card" key={`${item.name}-${currentMenu.en}`}>
-                <div className="dish-image" style={{ backgroundImage: `url(${item.image || dishPhoto})` }} role="img" aria-label={item.name} />
+                <div className="dish-image" data-bg={item.image || dishPhoto} role="img" aria-label={item.name} />
                 <div className="dish-body">
                   <div className="dish-header">
                     <h3>{item.name}</h3>
@@ -122,7 +122,7 @@ export default function Cuisine() {
           </a>
         </div>
 
-        <div className="ph b rv" role="img" aria-label="Signature dish" style={{ backgroundImage: `url(${dishPhoto})`, backgroundSize: 'cover', backgroundPosition: 'center top' }}></div>
+        <div className="ph b rv" role="img" aria-label="Signature dish" data-bg={dishPhoto} style={{ backgroundSize: 'cover', backgroundPosition: 'center top' }}></div>
       </div>
     </section>
   )

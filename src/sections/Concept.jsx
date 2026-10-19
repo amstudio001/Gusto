@@ -21,7 +21,8 @@ export default function Concept() {
             className="ph b rv"
             role="img"
             aria-label="The new Gusto interior"
-            style={{ backgroundImage: `url(${interior})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+            data-bg={interior}
+            style={{ backgroundSize: 'cover', backgroundPosition: 'center' }}
           />
         </div>
         <ul className="pillars rv">

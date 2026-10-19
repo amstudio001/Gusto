@@ -74,7 +74,7 @@ export default function Bar() {
           <div className="menu-grid bar-menu-grid" key={`${language}-${currentMenu.en}`}>
             {currentItems.map((item) => (
               <article className="dish-card bar-card" key={`${item.name}-${currentMenu.en}`}>
-                <div className="dish-image bar-image" style={{ backgroundImage: `url(${item.image})` }} role="img" aria-label={item.name} />
+                <div className="dish-image bar-image" data-bg={item.image} role="img" aria-label={item.name} />
                 <div className="dish-body">
                   <div className="dish-header">
                     <h3>{item.name}</h3>
@@ -88,7 +88,7 @@ export default function Bar() {
 
           <a className="btn" href="https://api.msmart.am/s/a_9-6SaPHPJ6pAEPFMJVvg" target="_blank" rel="noreferrer">{ru ? 'Открыть меню' : 'View Menu'}</a>
         </div>
-        <div className="ph c rv" role="img" aria-label="The Gusto bar" style={{ backgroundImage: `url(${barPhoto})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
+        <div className="ph c rv" role="img" aria-label="The Gusto bar" data-bg={barPhoto} style={{ backgroundSize: 'cover', backgroundPosition: 'center' }} />
       </div>
     </section>
   )

@@ -45,7 +45,7 @@ export default function Gallery() {
           <h2>{ru ? 'Моменты нашего дома.' : 'Moments from the house.'}</h2>
           <div className="gg">
             {photos.map((p) => (
-              <div key={p.en} className={`ph ${p.v}`} role="img" aria-label={ru ? p.ru : p.en} style={{ backgroundImage: `url(${p.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }} onClick={() => setOpen(p)} />
+              <div key={p.en} className={`ph ${p.v}`} role="img" aria-label={ru ? p.ru : p.en} data-bg={p.image} style={{ backgroundSize: 'cover', backgroundPosition: 'center' }} onClick={() => setOpen(p)} />
             ))}
           </div>
         </div>
