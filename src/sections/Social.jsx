@@ -1,10 +1,10 @@
 import '../styles/social.css'
-import interior1 from '../assets/restaurant/interior/Interior1.png'
-import interior2 from '../assets/restaurant/interior/Interior2.png'
+import interior1 from '../assets/restaurant/interior/Interior1.webp'
+import interior2 from '../assets/restaurant/interior/Interior2.webp'
 import dishPhoto from '../assets/cuisine/dish.png'
 import barPhoto from '../assets/restaurant/bar/bar.png'
-import interior3 from '../assets/restaurant/interior/Interior3.png'
-import newInterior from '../assets/restaurant/interior/newinterior.png'
+import interior3 from '../assets/restaurant/interior/Interior3.webp'
+import newInterior from '../assets/restaurant/interior/newinterior.webp'
 import { useLanguage } from '../context/LanguageContext'
 
 const socialPhotos = [interior1, dishPhoto, barPhoto, interior2, interior3, newInterior]

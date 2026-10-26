@@ -1,5 +1,5 @@
 import '../styles/about.css'
-import aboutPhoto from '../assets/restaurant/interior/about.png'
+import aboutPhoto from '../assets/restaurant/interior/about.webp'
 import { useLanguage } from '../context/LanguageContext'
 
 export default function About() {
