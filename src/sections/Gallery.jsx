@@ -10,12 +10,9 @@ import barPhoto from '../assets/restaurant/bar/bar.png'
 import newPhoto2 from '../assets/restaurant/interior/newphoto2-web.jpg'
 import newPhoto3 from '../assets/restaurant/interior/newphoto3.webp'
 import newPhoto4 from '../assets/restaurant/interior/newphoto4-web.jpg'
-import bestInterior from '../assets/restaurant/interior/bestinterior.webp'
-import hall from '../assets/restaurant/interior/hall.png'
 import { useLanguage } from '../context/LanguageContext'
 
 const photos = [
-  { image: bestInterior, v: '', en: 'The house at first light', ru: 'Дом на рассвете' },
   { image: interior1, v: 'b', en: 'The dining room', ru: 'Обеденный зал' },
   { image: interior2, v: 'c', en: 'A table detail', ru: 'Деталь стола' },
   { image: newInterior, v: '', en: 'The new Gusto', ru: 'Новый Gusto' },
@@ -26,7 +23,6 @@ const photos = [
   { image: newPhoto2, v: 'b', en: 'The renewed dining room', ru: 'Обновлённый зал' },
   { image: newPhoto3, v: 'c', en: 'An evening setting', ru: 'Вечерняя сервировка' },
   { image: newPhoto4, v: '', en: 'A quiet corner', ru: 'Уютный уголок' },
-  { image: hall, v: 'b', en: 'The main hall', ru: 'Главный зал' },
 ]
 
 export default function Gallery() {
