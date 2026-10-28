@@ -28,23 +28,7 @@
 .philosophy-tabs button:nth-child(even){margin-left:.5rem}
 .philosophy-tabs button span{color:var(--gold);font:500 .58rem var(--sans);letter-spacing:.12em}
 .philosophy-tabs button[aria-selected="true"]{border-bottom-color:var(--wine);color:var(--wine)}
-.philosophy-showcase.experience-active{position:relative;display:flex;min-height:620px;align-items:center;overflow:hidden;background:#241b18}
-.experience-active .philosophy-visual{position:absolute;inset:0;min-height:0}
-.experience-active .philosophy-visual::after{inset:0;background:linear-gradient(90deg,rgba(18,13,12,.68),rgba(18,13,12,.28) 60%,rgba(18,13,12,.16)),linear-gradient(0deg,rgba(18,13,12,.45),transparent 42%)}
-.experience-active .philosophy-watermark{color:rgba(255,255,255,.13)}
-.experience-active .philosophy-photo-caption{display:none}
-.experience-active .philosophy-content{position:relative;z-index:2;width:min(560px,58%);margin:2rem 0 2rem clamp(1.5rem,7vw,6rem);padding:clamp(1.5rem,3vw,2.7rem);border:1px solid rgba(255,255,255,.24);background:rgba(33,25,22,.58);color:#fff;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-.experience-active .philosophy-content-index{color:#e0c58f}
-.experience-active .philosophy-content h3,.experience-active .philosophy-copy>p{color:#fff}
-.experience-active .philosophy-signature{margin-top:1.35rem;color:#e0c58f;font:italic 400 clamp(1.4rem,2.5vw,2rem)/1.2 var(--serif)}
-.experience-active .philosophy-moments{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.1rem;color:rgba(255,255,255,.88);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase}
-.experience-active .philosophy-moments span{display:inline-flex;gap:.45rem}
-.experience-active .philosophy-moments i{color:#e0c58f;font-style:normal}
-.experience-active .philosophy-tabs{border-top-color:rgba(255,255,255,.25)}
-.experience-active .philosophy-tabs button{border-bottom-color:rgba(255,255,255,.2);color:rgba(255,255,255,.72)}
-.experience-active .philosophy-tabs button span{color:#e0c58f}
-.experience-active .philosophy-tabs button[aria-selected="true"]{border-bottom-color:#e0c58f;color:#fff}
 @media(hover:hover){.philosophy-tabs button:hover{color:var(--wine)}}
-@media(max-width:900px){.philosophy-showcase{grid-template-columns:1fr}.philosophy-visual{min-height:clamp(300px,60vw,480px)}.philosophy-content{padding:2rem clamp(1.5rem,5vw,3rem)}.philosophy-showcase.experience-active{min-height:580px}.experience-active .philosophy-content{width:min(680px,82%);margin:2rem auto;padding:2rem}}
-@media(max-width:600px){.philosophy-showcase{margin-top:2rem}.philosophy-visual{min-height:290px}.philosophy-watermark{top:-.08em;font-size:12rem}.philosophy-photo-caption{right:1rem;bottom:2.2rem;left:1rem}.philosophy-photo-caption strong{font-size:2.4rem}.philosophy-progress{right:1rem;bottom:1rem;left:1rem}.philosophy-content{padding:1.5rem 1.2rem}.philosophy-content h3{font-size:2.6rem}.philosophy-copy>p{font-size:.9rem}.philosophy-tabs{margin-top:1.7rem}.philosophy-tabs button{min-height:50px;font-size:.95rem;gap:.5rem}.philosophy-showcase.experience-active{min-height:580px;padding:1rem}.experience-active .philosophy-visual{inset:0}.experience-active .philosophy-content{width:100%;margin:0;padding:1.2rem;background:rgba(33,25,22,.68)}.experience-active .philosophy-content h3{font-size:2.3rem}.experience-active .philosophy-tabs{margin-top:1.1rem}.experience-active .philosophy-tabs button{font-size:.9rem}.experience-active .philosophy-progress{right:1rem;bottom:1rem;left:1rem}}
+@media(max-width:900px){.philosophy-showcase{grid-template-columns:1fr}.philosophy-visual{min-height:clamp(300px,60vw,480px)}.philosophy-content{padding:2rem clamp(1.5rem,5vw,3rem)}}
+@media(max-width:600px){.philosophy-showcase{margin-top:2rem}.philosophy-visual{min-height:290px}.philosophy-watermark{top:-.08em;font-size:12rem}.philosophy-photo-caption{right:1rem;bottom:2.2rem;left:1rem}.philosophy-photo-caption strong{font-size:2.4rem}.philosophy-progress{right:1rem;bottom:1rem;left:1rem}.philosophy-content{padding:1.5rem 1.2rem}.philosophy-content h3{font-size:2.6rem}.philosophy-copy>p{font-size:.9rem}.philosophy-tabs{margin-top:1.7rem}.philosophy-tabs button{min-height:50px;font-size:.95rem;gap:.5rem}}
 @media(prefers-reduced-motion:reduce){.philosophy-visual img{transition:none;transform:none}.philosophy-progress i{animation:none;transform:scaleX(1)}}

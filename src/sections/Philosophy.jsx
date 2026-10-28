@@ -11,19 +11,19 @@ const principles = {
     { title: 'Tradition', text: 'Recipes, culture, and experience are carried forward with respect and a light modern touch.', image: traditionPhoto, alt: 'A beautifully set table at Gusto' },
     { title: 'Quality', text: 'We pay attention to the ingredient, the preparation, and the small details that make a table memorable.', image: qualityPhoto, alt: 'Italian cuisine prepared at Gusto' },
     { title: 'Hospitality', text: 'A warm welcome begins at the door and continues through every course and conversation.', image: hospitalityPhoto, alt: 'The warm dining room at Gusto' },
-    { title: 'Experience', text: 'Food, space, service, and atmosphere come together as one generous expression of Gusto.', image: experiencePhoto, alt: 'The renewed interior at Gusto', signature: 'An evening worth coming back to.', moments: ['Gather', 'Dine', 'Connect', 'Savour'] },
+    { title: 'Experience', text: 'Food, space, service, and atmosphere come together as one generous expression of Gusto.', image: experiencePhoto, alt: 'The renewed interior at Gusto' },
   ],
   ru: [
     { title: 'Традиция', text: 'Рецепты, культура и опыт бережно передаются дальше с лёгким современным акцентом.', image: traditionPhoto, alt: 'Красивая сервировка стола в Gusto' },
     { title: 'Качество', text: 'Мы внимательно относимся к продукту, приготовлению и маленьким деталям, которые делают стол особенным.', image: qualityPhoto, alt: 'Итальянское блюдо, приготовленное в Gusto' },
     { title: 'Гостеприимство', text: 'Тёплый приём начинается у двери и продолжается в каждом блюде и разговоре.', image: hospitalityPhoto, alt: 'Уютный зал ресторана Gusto' },
-    { title: 'Впечатление', text: 'Еда, пространство, сервис и атмосфера соединяются в единое выражение Gusto.', image: experiencePhoto, alt: 'Обновлённый интерьер Gusto', signature: 'Вечер, к которому хочется вернуться.', moments: ['Встреча', 'Ужин', 'Разговор', 'Десерт'] },
+    { title: 'Впечатление', text: 'Еда, пространство, сервис и атмосфера соединяются в единое выражение Gusto.', image: experiencePhoto, alt: 'Обновлённый интерьер Gusto' },
   ],
   hy: [
     { title: 'Ավանդույթ', text: 'Բաղադրատոմսերը, մշակույթն ու փորձը փոխանցում ենք՝ պահպանելով դրանք և ավելացնելով ժամանակակից նուրբ շեշտ։', image: traditionPhoto, alt: 'Gusto-ում գեղեցիկ ձևավորված սեղան' },
     { title: 'Որակ', text: 'Ուշադրություն ենք դարձնում մթերքին, պատրաստման եղանակին և այն փոքր մանրուքներին, որոնք սեղանն առանձնահատուկ են դարձնում։', image: qualityPhoto, alt: 'Gusto-ում պատրաստված իտալական ուտեստ' },
     { title: 'Հյուրընկալություն', text: 'Ջերմ ընդունելությունը սկսվում է դռան մոտ և շարունակվում յուրաքանչյուր ուտեստի ու զրույցի ընթացքում։', image: hospitalityPhoto, alt: 'Gusto-ի ջերմ ճաշասրահը' },
-    { title: 'Տպավորություն', text: 'Սնունդը, տարածքը, սպասարկումն ու մթնոլորտը միավորվում են՝ դառնալով Gusto-ի ամբողջական փորձառությունը։', image: experiencePhoto, alt: 'Gusto-ի նորացված ինտերիերը', signature: 'Երեկո, որին ուզում ես վերադառնալ։', moments: ['Հանդիպում', 'Ընթրիք', 'Զրույց', 'Աղանդեր'] },
+    { title: 'Տպավորություն', text: 'Սնունդը, տարածքը, սպասարկումն ու մթնոլորտը միավորվում են՝ դառնալով Gusto-ի ամբողջական փորձառությունը։', image: experiencePhoto, alt: 'Gusto-ի նորացված ինտերիերը' },
   ],
 }
 
@@ -36,9 +36,11 @@ const sectionText = {
 export default function Philosophy() {
   const { language } = useLanguage()
   const [active, setActive] = useState(0)
+  const [preview, setPreview] = useState(null)
   const pausedRef = useRef(false)
   const items = principles[language]
   const labels = sectionText[language]
+  const displayed = preview ?? active
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined
@@ -73,7 +75,7 @@ export default function Philosophy() {
           <h2>{labels.title}</h2>
         </div>
         <div
-          className={`philosophy-showcase rv${active === 3 ? ' experience-active' : ''}`}
+          className="philosophy-showcase rv"
           onMouseEnter={() => { pausedRef.current = true }}
           onMouseLeave={() => { pausedRef.current = false }}
           onFocus={pauseOnFocus}
@@ -83,16 +85,16 @@ export default function Philosophy() {
             {items.map((item, index) => (
               <img
                 key={item.title}
-                className={index === active ? 'active' : ''}
+                className={index === displayed ? 'active' : ''}
                 src={item.image}
-                alt={index === active ? item.alt : ''}
-                aria-hidden={index !== active}
+                alt={index === displayed ? item.alt : ''}
+                aria-hidden={index !== displayed}
               />
             ))}
-            <span className="philosophy-watermark" aria-hidden="true">{String(active + 1).padStart(2, '0')}</span>
+            <span className="philosophy-watermark" aria-hidden="true">{String(displayed + 1).padStart(2, '0')}</span>
             <div className="philosophy-photo-caption">
               <span>{labels.eyebrow}</span>
-              <strong>{items[active].title}</strong>
+              <strong>{items[displayed].title}</strong>
             </div>
             <div className="philosophy-progress" aria-hidden="true">
               {items.map((item, index) => (
@@ -114,6 +116,8 @@ export default function Philosophy() {
                   tabIndex={index === active ? 0 : -1}
                   aria-controls={`philosophy-panel-${language}`}
                   onClick={() => setActive(index)}
+                  onMouseEnter={() => setPreview(index)}
+                  onMouseLeave={() => setPreview(null)}
                   onKeyDown={(event) => onTabKeyDown(event, index)}
                 >
                   <span>{String(index + 1).padStart(2, '0')}</span>
@@ -125,16 +129,6 @@ export default function Philosophy() {
               <span className="philosophy-content-index">{String(active + 1).padStart(2, '0')}</span>
               <h3>{items[active].title}</h3>
               <p>{items[active].text}</p>
-              {active === 3 && (
-                <>
-                  <blockquote className="philosophy-signature">{items[active].signature}</blockquote>
-                  <div className="philosophy-moments" aria-label={items[active].moments.join(' · ')}>
-                    {items[active].moments.map((moment, index) => (
-                      <span key={moment}>{moment}{index < items[active].moments.length - 1 && <i aria-hidden="true">·</i>}</span>
-                    ))}
-                  </div>
-                </>
-              )}
             </div>
           </div>
         </div>
