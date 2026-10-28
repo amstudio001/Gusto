@@ -10,30 +10,42 @@ import barPhoto from '../assets/restaurant/bar/bar.png'
 import newPhoto2 from '../assets/restaurant/interior/newphoto2-web.jpg'
 import newPhoto3 from '../assets/restaurant/interior/newphoto3.webp'
 import newPhoto4 from '../assets/restaurant/interior/newphoto4-web.jpg'
+import atmospherePhoto from '../assets/restaurant/interior/atmosphere.webp'
+import servicePhoto from '../assets/restaurant/interior/service.webp'
+import cuisinePhoto from '../assets/restaurant/interior/cuisine.webp'
+import detailPhoto from '../assets/restaurant/interior/details.webp'
 import { useLanguage } from '../context/LanguageContext'
 
 const photos = [
   { image: interior1, v: 'b', en: 'The dining room', ru: 'Обеденный зал' },
+  { image: servicePhoto, v: 'c', en: 'A warm welcome', ru: 'Тёплый приём' },
   { image: interior2, v: 'c', en: 'A table detail', ru: 'Деталь стола' },
   { image: newInterior, v: '', en: 'The new Gusto', ru: 'Новый Gusto' },
+  { image: atmospherePhoto, v: 'b', en: 'The atmosphere', ru: 'Атмосфера' },
   { image: interior3, v: 'c', en: 'An evening at the bar', ru: 'Вечер в баре' },
   { image: aboutPhoto, v: '', en: 'The room between courses', ru: 'Зал между блюдами' },
+  { image: newPhoto2, v: 'b', en: 'The renewed dining room', ru: 'Обновлённый зал' },
+  { image: cuisinePhoto, v: '', en: 'Italian cuisine', ru: 'Итальянская кухня' },
   { image: interior4, v: 'b', en: 'A seat in the house', ru: 'Место в нашем доме' },
   { image: barPhoto, v: 'c', en: 'Behind the bar', ru: 'За баром' },
-  { image: newPhoto2, v: 'b', en: 'The renewed dining room', ru: 'Обновлённый зал' },
+  { image: detailPhoto, v: 'b', en: 'Thoughtful details', ru: 'Продуманные детали' },
   { image: newPhoto3, v: 'c', en: 'An evening setting', ru: 'Вечерняя сервировка' },
   { image: newPhoto4, v: '', en: 'A quiet corner', ru: 'Уютный уголок' },
 ]
 
 const armenianCaptions = [
   'Ճաշասրահ',
+  'Ջերմ ընդունելություն',
   'Սեղանի դետալ',
   'Նոր Gusto-ն',
+  'Մթնոլորտ',
   'Երեկո բարում',
   'Սրահը՝ ճաշատեսակների միջև',
+  'Թարմացված ճաշասրահ',
+  'Իտալական խոհանոց',
   'Մեր տան անկյունը',
   'Բարի հետևում',
-  'Թարմացված ճաշասրահ',
+  'Մտածված մանրուքներ',
   'Երեկոյան սպասքադրում',
   'Հանգիստ անկյուն',
 ]
