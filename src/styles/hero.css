@@ -12,7 +12,7 @@
 
 .hero-logo{width:min(440px,72vw);height:auto;display:block;margin:0 auto 2rem}
 
-.badge{display:inline-block;border:1px solid rgba(216,191,140,.5);padding:.55rem 1.2rem;font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;margin-bottom:1.8rem;backdrop-filter:blur(4px)}
+.badge{display:inline-block;border:1px solid rgba(216,191,140,.5);border-radius:999px;padding:.55rem 1.2rem;font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;margin-bottom:1.8rem;backdrop-filter:blur(4px)}
 
 @media (max-width: 600px){
   .hero .in{padding:1rem .9rem 2.2rem}

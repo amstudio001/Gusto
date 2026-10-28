@@ -3,13 +3,15 @@ import { createContext, useContext, useEffect, useState } from 'react'
 const LanguageContext = createContext(null)
 
 export function LanguageProvider({ children }) {
-  const [language, setLanguage] = useState(() => localStorage.getItem('gusto-language') || 'en')
+  const [language, setLanguage] = useState(() => {
+    const storedLanguage = localStorage.getItem('gusto-language')
+    return ['en', 'ru', 'hy'].includes(storedLanguage) ? storedLanguage : 'en'
+  })
   useEffect(() => {
     localStorage.setItem('gusto-language', language)
     document.documentElement.lang = language
   }, [language])
-  const toggleLanguage = () => setLanguage((current) => current === 'en' ? 'ru' : 'en')
-  return <LanguageContext.Provider value={{ language, toggleLanguage }}>{children}</LanguageContext.Provider>
+  return <LanguageContext.Provider value={{ language, setLanguage }}>{children}</LanguageContext.Provider>
 }
 
 export function useLanguage() {

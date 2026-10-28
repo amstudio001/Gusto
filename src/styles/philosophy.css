@@ -1,7 +1,50 @@
-
-.phi{border-top:1px solid var(--line)}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);margin-top:4rem;border-top:1px solid var(--line)}
-.grid4>div{padding:2.2rem 1.6rem 1rem 0}
-.grid4 b{font:400 .8rem var(--sans);color:var(--gold);letter-spacing:.2em}
-.grid4 h3{font-size:1.9rem;margin:1rem 0 .6rem;letter-spacing:.06em}
-.grid4 p{color:var(--mute);font-size:.9rem}
+.phi{border-top:1px solid var(--line);background:var(--bg)}
+.phi-heading{max-width:760px}
+.phi-heading .eyebrow{margin-bottom:1rem}
+.philosophy-showcase{display:grid;grid-template-columns:1.05fr .95fr;min-height:510px;margin-top:3rem;background:var(--bg2)}
+.philosophy-visual{position:relative;min-height:510px;overflow:hidden;background:#2c2420}
+.philosophy-visual::after{position:absolute;inset:45% 0 0;content:'';background:linear-gradient(180deg,transparent,rgba(20,16,14,.45));pointer-events:none}
+.philosophy-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.035);transition:opacity .8s ease,transform 6.5s linear}
+.philosophy-visual img.active{opacity:1;transform:scale(1)}
+.philosophy-watermark{position:absolute;z-index:1;top:-.16em;left:-.04em;color:rgba(255,255,255,.18);font:400 clamp(10rem,24vw,22rem)/.8 var(--serif);pointer-events:none}
+.philosophy-photo-caption{position:absolute;z-index:1;right:1.5rem;bottom:2.5rem;left:1.5rem;display:flex;flex-direction:column;align-items:flex-start;color:#fff}
+.philosophy-photo-caption span{color:#e0c58f;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase}
+.philosophy-photo-caption strong{margin-top:.25rem;font:400 clamp(2rem,4vw,3.8rem)/1 var(--serif)}
+.philosophy-progress{position:absolute;z-index:2;right:1.5rem;bottom:1.25rem;left:1.5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:.45rem}
+.philosophy-progress>span{height:2px;overflow:hidden;background:rgba(255,255,255,.48)}
+.philosophy-progress>span.complete{background:#e0c58f}
+.philosophy-progress>span.active{background:rgba(255,255,255,.48)}
+.philosophy-progress i{display:block;width:100%;height:100%;background:#e0c58f;transform:scaleX(0);transform-origin:left;animation:philosophyProgress 6.5s linear forwards}
+.philosophy-showcase:hover .philosophy-progress i,.philosophy-showcase:focus-within .philosophy-progress i{animation-play-state:paused}
+@keyframes philosophyProgress{to{transform:scaleX(1)}}
+.philosophy-content{display:flex;flex-direction:column;justify-content:center;padding:clamp(2rem,5vw,5rem)}
+.philosophy-copy{order:1}
+.philosophy-content-index{color:var(--gold);font-size:.72rem;letter-spacing:.2em}
+.philosophy-content h3{margin-top:1rem;color:var(--wine);font:400 clamp(2.5rem,5vw,4.2rem)/1.05 var(--serif)}
+.philosophy-copy>p{max-width:34rem;margin-top:1.1rem;color:var(--mute);font-size:.95rem;line-height:1.8}
+.philosophy-tabs{order:2;display:grid;grid-template-columns:1fr 1fr;margin-top:2.5rem;border-top:1px solid var(--line)}
+.philosophy-tabs button{display:flex;align-items:center;gap:.7rem;min-height:54px;padding:.7rem .45rem;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--mute);text-align:left;font:400 1rem var(--serif);cursor:pointer;transition:color .25s ease,border-color .25s ease}
+.philosophy-tabs button:nth-child(odd){margin-right:.5rem}
+.philosophy-tabs button:nth-child(even){margin-left:.5rem}
+.philosophy-tabs button span{color:var(--gold);font:500 .58rem var(--sans);letter-spacing:.12em}
+.philosophy-tabs button[aria-selected="true"]{border-bottom-color:var(--wine);color:var(--wine)}
+.philosophy-showcase.experience-active{position:relative;display:flex;min-height:620px;align-items:center;overflow:hidden;background:#241b18}
+.experience-active .philosophy-visual{position:absolute;inset:0;min-height:0}
+.experience-active .philosophy-visual::after{inset:0;background:linear-gradient(90deg,rgba(18,13,12,.68),rgba(18,13,12,.28) 60%,rgba(18,13,12,.16)),linear-gradient(0deg,rgba(18,13,12,.45),transparent 42%)}
+.experience-active .philosophy-watermark{color:rgba(255,255,255,.13)}
+.experience-active .philosophy-photo-caption{display:none}
+.experience-active .philosophy-content{position:relative;z-index:2;width:min(560px,58%);margin:2rem 0 2rem clamp(1.5rem,7vw,6rem);padding:clamp(1.5rem,3vw,2.7rem);border:1px solid rgba(255,255,255,.24);background:rgba(33,25,22,.58);color:#fff;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.experience-active .philosophy-content-index{color:#e0c58f}
+.experience-active .philosophy-content h3,.experience-active .philosophy-copy>p{color:#fff}
+.experience-active .philosophy-signature{margin-top:1.35rem;color:#e0c58f;font:italic 400 clamp(1.4rem,2.5vw,2rem)/1.2 var(--serif)}
+.experience-active .philosophy-moments{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.1rem;color:rgba(255,255,255,.88);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase}
+.experience-active .philosophy-moments span{display:inline-flex;gap:.45rem}
+.experience-active .philosophy-moments i{color:#e0c58f;font-style:normal}
+.experience-active .philosophy-tabs{border-top-color:rgba(255,255,255,.25)}
+.experience-active .philosophy-tabs button{border-bottom-color:rgba(255,255,255,.2);color:rgba(255,255,255,.72)}
+.experience-active .philosophy-tabs button span{color:#e0c58f}
+.experience-active .philosophy-tabs button[aria-selected="true"]{border-bottom-color:#e0c58f;color:#fff}
+@media(hover:hover){.philosophy-tabs button:hover{color:var(--wine)}}
+@media(max-width:900px){.philosophy-showcase{grid-template-columns:1fr}.philosophy-visual{min-height:clamp(300px,60vw,480px)}.philosophy-content{padding:2rem clamp(1.5rem,5vw,3rem)}.philosophy-showcase.experience-active{min-height:580px}.experience-active .philosophy-content{width:min(680px,82%);margin:2rem auto;padding:2rem}}
+@media(max-width:600px){.philosophy-showcase{margin-top:2rem}.philosophy-visual{min-height:290px}.philosophy-watermark{top:-.08em;font-size:12rem}.philosophy-photo-caption{right:1rem;bottom:2.2rem;left:1rem}.philosophy-photo-caption strong{font-size:2.4rem}.philosophy-progress{right:1rem;bottom:1rem;left:1rem}.philosophy-content{padding:1.5rem 1.2rem}.philosophy-content h3{font-size:2.6rem}.philosophy-copy>p{font-size:.9rem}.philosophy-tabs{margin-top:1.7rem}.philosophy-tabs button{min-height:50px;font-size:.95rem;gap:.5rem}.philosophy-showcase.experience-active{min-height:580px;padding:1rem}.experience-active .philosophy-visual{inset:0}.experience-active .philosophy-content{width:100%;margin:0;padding:1.2rem;background:rgba(33,25,22,.68)}.experience-active .philosophy-content h3{font-size:2.3rem}.experience-active .philosophy-tabs{margin-top:1.1rem}.experience-active .philosophy-tabs button{font-size:.9rem}.experience-active .philosophy-progress{right:1rem;bottom:1rem;left:1rem}}
+@media(prefers-reduced-motion:reduce){.philosophy-visual img{transition:none;transform:none}.philosophy-progress i{animation:none;transform:scaleX(1)}}

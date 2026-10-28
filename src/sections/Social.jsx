@@ -12,10 +12,11 @@ const socialPhotos = [interior1, dishPhoto, barPhoto, interior2, interior3, newI
 export default function Social() {
   const { language } = useLanguage()
   const ru = language === 'ru'
+  const hy = language === 'hy'
   return (
-<section className="soc"><div className="wrap rv"><span className="eyebrow">{ru ? 'Следите за нашей историей' : 'Follow Our Story'}</span>
+<section className="soc"><div className="wrap rv"><span className="eyebrow">{ru ? 'Следите за нашей историей' : hy ? 'Հետևեք մեր պատմությանը' : 'Follow Our Story'}</span>
   <h2><a href="https://www.instagram.com/gusto.yerevan/" target="_blank" rel="noreferrer">@gusto.yerevan</a></h2>
-  <div className="sg">{socialPhotos.map((photo, index) => <a className={`ph social-card ${index % 3 === 1 ? 'b' : ''} ${index % 3 === 2 ? 'c' : ''}`} key={photo} href="https://www.instagram.com/gusto.yerevan/" target="_blank" rel="noreferrer" aria-label={`${ru ? 'Посмотреть момент Gusto' : 'View Gusto moment'} ${index + 1} ${ru ? 'в Instagram' : 'on Instagram'}`} data-bg={photo} style={{ backgroundSize: 'cover', backgroundPosition: 'center' }}><span aria-hidden="true">↗</span></a>)}</div>
-  <p className="note" style={{ marginTop: '1rem' }}>{ru ? 'Больше моментов нашего дома — в Instagram.' : 'More moments from the house on Instagram.'}</p></div></section>
+  <div className="sg">{socialPhotos.map((photo, index) => <a className={`ph social-card ${index % 3 === 1 ? 'b' : ''} ${index % 3 === 2 ? 'c' : ''}`} key={photo} href="https://www.instagram.com/gusto.yerevan/" target="_blank" rel="noreferrer" aria-label={`${ru ? 'Посмотреть момент Gusto' : hy ? 'Տեսնել Gusto-ի պահը' : 'View Gusto moment'} ${index + 1} ${ru ? 'в Instagram' : hy ? 'Instagram-ում' : 'on Instagram'}`} data-bg={photo} style={{ backgroundSize: 'cover', backgroundPosition: 'center' }}><span aria-hidden="true">↗</span></a>)}</div>
+  <p className="note" style={{ marginTop: '1rem' }}>{ru ? 'Больше моментов нашего дома — в Instagram.' : hy ? 'Մեր տան ավելի շատ պահեր՝ Instagram-ում։' : 'More moments from the house on Instagram.'}</p></div></section>
   )
 }

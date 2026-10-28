@@ -13,7 +13,7 @@ a,button{-webkit-tap-highlight-color:transparent}
 @media(max-width:900px){
 .cpt-grid,.pillars,.bar .wrap{grid-template-columns:1fr}
 .pillars li{padding:1.6rem 0;border-bottom:1px solid var(--line)}.pillars{margin-top:3rem}
-.bar .ph{order:1;aspect-ratio:4/3}.cui .ph{aspect-ratio:4/3}.cpt .ph{aspect-ratio:4/3}}
+.bar .ph{order:1;aspect-ratio:4/3}.cui .ph{aspect-ratio:4/3}.cpt .ph{aspect-ratio:8/5}}
 @media(max-width:900px){
 .links,.nav-actions .btn{display:none}.nb{display:block}
 body{font-size:15.5px;line-height:1.75}

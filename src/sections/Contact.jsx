@@ -4,17 +4,18 @@ import { useLanguage } from '../context/LanguageContext'
 export default function Contact() {
   const { language } = useLanguage()
   const ru = language === 'ru'
+  const hy = language === 'hy'
   return (
     <section className="con" id="contact">
       <div className="wrap">
         <div className="rv">
           <span className="eyebrow" style={{ color: '#d9a5ad' }}>
-            {ru ? 'Адрес и контакты' : 'Location & Contact'}
+            {ru ? 'Адрес и контакты' : hy ? 'Հասցե և կապ' : 'Location & Contact'}
           </span>
-          <h2>{ru ? 'Ждём вас.' : 'Visit us.'}</h2>
+          <h2>{ru ? 'Ждём вас.' : hy ? 'Սիրով սպասում ենք ձեզ։' : 'Visit us.'}</h2>
           
           <dl>
-            <dt>{ru ? 'Адрес' : 'Address'}</dt>
+            <dt>{ru ? 'Адрес' : hy ? 'Հասցե' : 'Address'}</dt>
             <dd>
               <a 
                 href="https://www.google.com/maps/search/?api=1&query=Abovyan+13,+Yerevan" 
@@ -25,15 +26,15 @@ export default function Contact() {
               </a>
             </dd>
 
-            <dt>{ru ? 'Телефон' : 'Phone'}</dt>
+            <dt>{ru ? 'Телефон' : hy ? 'Հեռախոս' : 'Phone'}</dt>
             <dd>
               <a href="tel:+37495802222">095 802222</a>{' '}
               <span aria-hidden="true">/</span>{' '}
               <a href="tel:+37411202222">011 202222</a>
             </dd>
 
-            <dt>{ru ? 'Часы работы' : 'Opening hours'}</dt>
-            <dd>{ru ? 'Ежедневно, 08:30–00:00' : 'Every day, 08:30–00:00'}</dd>
+            <dt>{ru ? 'Часы работы' : hy ? 'Աշխատանքային ժամեր' : 'Opening hours'}</dt>
+            <dd>{ru ? 'Ежедневно, 08:30–00:00' : hy ? 'Ամեն օր՝ 08:30–00:00' : 'Every day, 08:30–00:00'}</dd>
 
             <dt>Instagram</dt>
             <dd>
@@ -66,10 +67,10 @@ export default function Contact() {
               target="_blank" 
               rel="noreferrer"
             >
-              {ru ? 'Маршрут' : 'Get Directions'}
+              {ru ? 'Маршрут' : hy ? 'Ինչպես հասնել' : 'Get Directions'}
             </a>
             <a className="btn" href="tel:+37495802222">
-              {ru ? 'Позвонить' : 'Call Us'}
+              {ru ? 'Позвонить' : hy ? 'Զանգահարել' : 'Call Us'}
             </a>
             <a 
               className="btn" 

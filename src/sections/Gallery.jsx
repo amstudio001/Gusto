@@ -25,10 +25,24 @@ const photos = [
   { image: newPhoto4, v: '', en: 'A quiet corner', ru: 'Уютный уголок' },
 ]
 
+const armenianCaptions = [
+  'Ճաշասրահ',
+  'Սեղանի դետալ',
+  'Նոր Gusto-ն',
+  'Երեկո բարում',
+  'Սրահը՝ ճաշատեսակների միջև',
+  'Մեր տան անկյունը',
+  'Բարի հետևում',
+  'Թարմացված ճաշասրահ',
+  'Երեկոյան սպասքադրում',
+  'Հանգիստ անկյուն',
+]
+
 export default function Gallery() {
   const [open, setOpen] = useState(null)
   const { language } = useLanguage()
   const ru = language === 'ru'
+  const hy = language === 'hy'
   useEffect(() => { document.body.style.overflow = open ? 'hidden' : '' }, [open])
   useEffect(() => {
     const esc = (e) => e.key === 'Escape' && setOpen(null)
@@ -39,18 +53,18 @@ export default function Gallery() {
     <>
       <section className="gal" id="gallery">
         <div className="wrap rv">
-          <span className="eyebrow">{ru ? 'Галерея' : 'Gallery'}</span>
-          <h2>{ru ? 'Моменты нашего дома.' : 'Moments from the house.'}</h2>
+          <span className="eyebrow">{ru ? 'Галерея' : hy ? 'Պատկերասրահ' : 'Gallery'}</span>
+          <h2>{ru ? 'Моменты нашего дома.' : hy ? 'Մեր տան պահերը։' : 'Moments from the house.'}</h2>
           <div className="gg">
             {photos.map((p) => (
-              <div key={p.en} className={`ph ${p.v}`} role="img" aria-label={ru ? p.ru : p.en} data-bg={p.image} style={{ backgroundSize: 'cover', backgroundPosition: 'center' }} onClick={() => setOpen(p)} />
+              <div key={p.en} className={`ph ${p.v}`} role="img" aria-label={ru ? p.ru : hy ? armenianCaptions[photos.indexOf(p)] : p.en} data-bg={p.image} style={{ backgroundSize: 'cover', backgroundPosition: 'center' }} onClick={() => setOpen(p)} />
             ))}
           </div>
         </div>
       </section>
-      <div className={`lb ${open ? 'o' : ''}`} role="dialog" aria-label="Photo viewer" onClick={() => setOpen(null)}>
-        <button className="lbx" aria-label="Close">×</button>
-        {open && <div className={`ph ${open.v}`} role="img" aria-label={ru ? open.ru : open.en} style={{ backgroundImage: `url(${open.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />}
+      <div className={`lb ${open ? 'o' : ''}`} role="dialog" aria-label={ru ? 'Просмотр фотографий' : hy ? 'Լուսանկարների դիտում' : 'Photo viewer'} onClick={() => setOpen(null)}>
+        <button className="lbx" aria-label={ru ? 'Закрыть' : hy ? 'Փակել' : 'Close'}>×</button>
+        {open && <div className={`ph ${open.v}`} role="img" aria-label={ru ? open.ru : hy ? armenianCaptions[photos.indexOf(open)] : open.en} style={{ backgroundImage: `url(${open.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />}
       </div>
     </>
   )
