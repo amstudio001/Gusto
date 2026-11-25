@@ -3,7 +3,7 @@ import '../styles/philosophy.css'
 import { useLanguage } from '../context/LanguageContext'
 import traditionPhoto from '../assets/restaurant/interior/tradition.webp'
 import qualityPhoto from '../assets/restaurant/interior/quality.webp'
-import hospitalityPhoto from '../assets/restaurant/interior/Interior1.webp'
+import hospitalityPhoto from '../assets/restaurant/interior/hospitality.jpg.webp'
 import experiencePhoto from '../assets/restaurant/interior/experience.webp'
 
 const principles = {

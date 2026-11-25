@@ -14,6 +14,7 @@ import atmospherePhoto from '../assets/restaurant/interior/atmosphere.webp'
 import servicePhoto from '../assets/restaurant/interior/service.webp'
 import cuisinePhoto from '../assets/restaurant/interior/cuisine.webp'
 import detailPhoto from '../assets/restaurant/interior/details.webp'
+import Interior6 from '../assets/restaurant/interior/Interior6.webp'
 import { useLanguage } from '../context/LanguageContext'
 
 const photos = [
@@ -31,6 +32,7 @@ const photos = [
   { image: detailPhoto, v: 'b', en: 'Thoughtful details', ru: 'Продуманные детали' },
   { image: newPhoto3, v: 'c', en: 'An evening setting', ru: 'Вечерняя сервировка' },
   { image: newPhoto4, v: '', en: 'A quiet corner', ru: 'Уютный уголок' },
+  { image: Interior6, v: 'b', en: 'The renewed dining room', ru: 'Обновлённый зал' },
 ]
 
 const armenianCaptions = [

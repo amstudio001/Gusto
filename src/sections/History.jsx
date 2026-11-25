@@ -2,16 +2,20 @@ import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import '../styles/history.css'
 import { useLanguage } from '../context/LanguageContext'
+import Interior2 from '../assets/restaurant/interior/Interior2.webp'
+import Interior1 from '../assets/restaurant/interior/Interior1.webp'
 import oldGusto from '../assets/history/oldgusto-web.jpg'
 import newGusto from '../assets/history/newgusto-web.jpg'
+import Interior7 from '../assets/restaurant/interior/Interior7.webp'
 import newInterior from '../assets/restaurant/interior/newinterior.webp'
 
-const historySlides = [oldGusto, newGusto, newInterior]
+
+const historySlides = [Interior2, Interior7, Interior1]
 
 const milestones = [
   { year: '2006', en: 'The beginning', ru: 'Начало', hy: 'Սկիզբը', text: { en: 'Gusto was the first restaurant in Yerevan to introduce guests to the art of open-kitchen dining.', ru: 'Gusto ресторан стал первым в Ереване, где гостей познакомили с искусством открытой кухни.', hy: 'Gusto-ն Երևանի առաջին ռեստորանն էր, որը հյուրերին ծանոթացրեց բաց խոհանոցում ճաշելու արվեստին։' } },
   { year: '2015', en: 'A renewed room', ru: 'Обновлённое пространство', hy: 'Նորացված տարածք', text: { en: 'The interior evolves, creating a warmer, more contemporary setting for the same generous hospitality.', ru: 'Интерьер меняется, создавая более тёплое и современное пространство для того же искреннего гостеприимства.', hy: 'Ինտերիերը փոխվում է՝ ստեղծելով ավելի ջերմ ու ժամանակակից միջավայր նույն անկեղծ հյուրընկալության համար։' } },
-  { year: '2026', en: 'The next chapter', ru: 'Следующая глава', hy: 'Հաջորդ գլուխը', text: { en: 'Twenty years on, Gusto brings its original spirit together with a fresh vision for the future.', ru: 'Спустя двадцать лет Gusto соединяет свой первоначальный дух со свежим взглядом в будущее.', hy: 'Քսան տարի անց Gusto-ն իր սկզբնական ոգին համադրում է ապագայի նոր տեսլականի հետ։' } },
+  { year: '2026', en: 'The next chapter', ru: 'Следующая глава', hy: 'Հաջորդ գլուխը', text: { en: 'Twenty years on, Gusto brings its original spirit together with a fresh vision for the future.', ru: 'Спустя двадцать лет Gusto соединяет свой первоначальный дух со свежим взглядом в будущее.', hy: 'Քսան տարի անց Gusto-ն իր սկզբնական ոգին համադրում է ապագԱյի նոր տեսլականի հետ։' } },
 ]
 
 const stats = [

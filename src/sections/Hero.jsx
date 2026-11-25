@@ -1,6 +1,6 @@
 import '../styles/hero.css'
 import logo from '../assets/brand/logo.png'
-import interior from '../assets/restaurant/interior/bestinterior.png'
+import interior6 from '../assets/restaurant/interior/Interior6.webp'
 import { useLanguage } from '../context/LanguageContext'
 
 export default function Hero() {
@@ -10,12 +10,11 @@ export default function Hero() {
   return (
 <header className="hero">
   <div
-    className="ph"
-    data-l="Gusto interior"
+    className="hero-photo"
     role="img"
     aria-label="Gusto restaurant interior"
-    style={{ backgroundImage: `url(${interior})` }}
-  ></div>
+    style={{ backgroundImage: `url(${interior6})` }}
+  />
   <div className="in">
     <span className="badge">{ru ? 'Прежний Gusto · Теперь с новым интерьером' : hy ? 'Նախկին Gusto-ն՝ նոր ինտերիերով' : 'The former Gusto · Now with a new interior'}</span>
     <img className="hero-logo" src={logo} alt="Gusto logo" width="420" height="139" />
